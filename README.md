@@ -2,6 +2,8 @@
 
 ## Description
 
+The only code you need to make is a server.js file.  There is a middleware that is missing which will link the css to the html.  If you are having trouble, you can reference the JS file that was given, this will help with your get/post and delete calls
+
 Create an application that can be used to write, save, and delete notes. This application will use an express backend and save and retrieve note data from a JSON file.
 
 * The application frontend has already been created, it's your job to build the backend and connect the two.
