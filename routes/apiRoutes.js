@@ -11,7 +11,12 @@ module.exports = function(app) {
 
     //Post a note
     app.post("/api/notes", function(req,res) {
-        noteContents.push(req.body);
+
+        //makes a newNote to push based on the request information from the user
+        let newNote = req.body
+
+
+        noteContents.push(req.body); 
     })
 }
 
@@ -19,4 +24,4 @@ module.exports = function(app) {
 
 
 //part of delete request
-for (let i = 0; i < noteContents.length; i++)
+// for (let i = 0; i < noteContents.length; i++)
