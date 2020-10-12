@@ -8,6 +8,7 @@ module.exports = function(app) {
 
     //Display all notes
     app.get("/api/notes", function(req, res) {
+        // console.log(noteContents)
         res.json(noteContents)
         console.log(noteContents)
     });
@@ -16,23 +17,17 @@ module.exports = function(app) {
     app.post("/api/notes", function(req,res) {
 
         //makes a newNote to push based on the request information from the user
-        let newNote = req.body
-        console.log(notes, 'in Save Note function');
-        let lastID = noteContents[noteContents.length - 1]["id"];
-        let newId = lastId + 1;
-        newNote["id"] = newId;
-
         console.log(req.body)
         noteContents.push(req.body); 
-
+        res.json('saved!')
 
         //writes the new note to the specified route
-        writeFileAsync("./db/noteContents.json", JSON.stringify(noteContents)).then(function() {
-            console.log("noteContents.json has been updated!");
+        // writeFileAsync("./db/noteContents.json", JSON.stringify(noteContents)).then(function() {
+        //     console.log("noteContents.json has been updated!");
         });
 
-    })
-}
+    }
+
 
 
 

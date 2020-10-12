@@ -1,7 +1,7 @@
 //Allows us to be able to use express.js
 var express = require("express");
 const noteContents = require("./db/noteData");
-
+const path = require('path');
 //This creates an express server
 var app = express();
 
@@ -11,6 +11,7 @@ var PORT = process.env.PORT || 5000;
 //allows express to parse JSON data
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
+app.use(express.static(path.join('./public')))
 
 //Routes for server to connect to 
 require("./routes/apiRoutes")(app);
