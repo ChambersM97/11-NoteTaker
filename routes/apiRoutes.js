@@ -9,6 +9,7 @@ module.exports = function(app) {
     //Display all notes
     app.get("/api/notes", function(req, res) {
         res.json(noteContents)
+        console.log(noteContents)
     });
 
     //Post a note
