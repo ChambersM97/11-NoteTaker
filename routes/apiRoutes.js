@@ -16,7 +16,7 @@ module.exports = function(app) {
 
         //makes a newNote to push based on the request information from the user
         let newNote = req.body
-
+        console.log(notes, 'in Save Note function');
         let lastID = noteContents[noteContents.length - 1]["id"];
         let newId = lastId + 1;
         newNote["id"] = newId;

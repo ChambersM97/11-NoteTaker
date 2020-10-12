@@ -17,5 +17,6 @@ require("./routes/htmlRoutes")(app);
 
 //Listens for the PORT we created on line 8 and runs the asynchronous function
 app.listen(PORT, function() {
+    console.log(notes, 'in Save Note function');
     console.log("App listening on PORT: " + PORT);
 })
