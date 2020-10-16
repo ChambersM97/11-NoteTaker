@@ -6,6 +6,7 @@ const fs = require ("fs");
 //Creates the route to send our get and post and delete requests
 module.exports = function(app) {
 
+
     //Display all notes
     app.get("/api/notes", function(req, res) {
         // console.log(noteContents)
@@ -28,7 +29,18 @@ module.exports = function(app) {
 
     }
 
-
+    app.delete("/api/notes:index", function(req,res) {
+            var idNumber = parseInt(req.params.index);
+            //will replace the selected object with an empty array
+            var deleteArray = [];
+        for (i = 0; i < noteContents.length; i++) {
+            if (i !== idNumber) {
+                deleteArray.push(noteContents[i]);
+            }
+        }
+        noteContents = deleteArray;
+        res.json("note deleted.")
+    })
 
 
 
