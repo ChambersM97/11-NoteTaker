@@ -29,7 +29,7 @@ module.exports = function(app) {
 
     }
 
-    app.delete("/api/notes:index", function(req,res) {
+    app.delete("/api/notes/:index", function(req,res) {
             var idNumber = parseInt(req.params.index);
             //will replace the selected object with an empty array
             var deleteArray = [];
