@@ -26,11 +26,11 @@ Create an application that can be used to write, save, and delete notes. This ap
 
 ## User Story
 
-AS A user, I want to be able to write and save notes
+AS A user, I want to be able to WRITE and SAVE notes
 
-I WANT to be able to delete notes I've written before
+I WANT to be able to DELETE notes I've written BEFORE
 
-SO THAT I can organize my thoughts and keep track of tasks I need to complete
+SO THAT I can ORGANIZE MY THOUGHTS and KEEP TRACK of tasks I need to complete
 
 ## Business Context
 

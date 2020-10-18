@@ -1,7 +1,7 @@
 //Allows us to be able to use express.js
-var express = require("express")
-
-var path = require('path');
+var express = require("express");
+const noteContents = require("./db/noteData");
+const path = require('path');
 //This creates an express server
 var app = express();
 
@@ -54,5 +54,7 @@ app.delete("/api/notes/:id", function(req, res){
 });
 //Listens for the PORT we created on line 8 and runs the asynchronous function
 app.listen(PORT, function() {
+    
+    //console.log(noteContents, 'in Save Note function');
     console.log("App listening on PORT: " + PORT);
 })
