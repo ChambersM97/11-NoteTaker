@@ -1,6 +1,6 @@
 //Allows us to be able to use express.js
 var express = require("express");
-const noteContents = require("./db/noteData");
+
 const path = require('path');
 //This creates an express server
 var app = express();
@@ -44,10 +44,8 @@ app.post('/api/notes', function (req, res) {
 app.delete("/api/notes/:id", function(req, res){
     let id = req.params.id;
     for (let i = 0; i < noteArray.length; i++){
-        var emptyArr = [];
-
         if (id === noteArray[i].id){
-            emptyArr.splice(i, 1);
+            noteArray.splice(i, 1);
             res.json(noteArray);
         };
     };
